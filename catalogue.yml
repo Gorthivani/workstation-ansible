@@ -6,4 +6,4 @@
     schema: true
   tasks:
     -name: Nodejs Setup
-    ansible.builtin.import_playbook: nodejs.yml
+    ansible.builtin.import_tasks: nodejs.yml
