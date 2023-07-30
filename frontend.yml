@@ -14,7 +14,7 @@
 
       - name: clean old content
         ansible.builtin.file:
-          path: /usr/share/nginx/html
+          path: /usr/share/nginx/html/*
           status: absent
 
 
@@ -37,6 +37,8 @@
           name: nginx
           state: restarted
           enabled: yes
+
+
 
 
 
