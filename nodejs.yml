@@ -6,8 +6,8 @@
       name: nodejs
       state: installed
 
-  - name: app-requisites
-    ansible.builtin.import_playbook: app-preq.yml
+  - name: App-requisites
+    ansible.builtin.import_tasks: app-preq.yml
 
   - name: Download NodeJS
     ansible.builtin.shell: npm install
