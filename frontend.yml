@@ -19,7 +19,7 @@
 
       - name: create app directory
         ansible.builtin.file:
-          src: /usr/share/nginx/html/
+          src: /usr/share/nginx/html
           state: directory
 
 
