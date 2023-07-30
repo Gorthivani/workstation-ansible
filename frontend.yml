@@ -1,4 +1,4 @@
- - name: Roboshop project frontend
+ - name: roboshop project frontend
    host: all
    become: true
    tasks:
