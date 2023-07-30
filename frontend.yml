@@ -15,11 +15,11 @@
       - name: Clean Old content
         ansible.builtin.file:
           path: /usr/share/nginx/html
-          status: absent
+          state: absent
 
       - name: Create App Directory
         ansible.builtin.file:
-          src: /usr/share/nginx/html
+          path: /usr/share/nginx/html
           state: directory
 
       - name: Download and extract application content
@@ -33,8 +33,6 @@
           name: nginx
           state: restarted
           enabled: yes
-
-
 
 
 
