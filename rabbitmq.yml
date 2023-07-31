@@ -8,18 +8,18 @@
     - name: install rabbit repos
       ansible.builtin.shell: https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/script.rpm.sh | bash
         
-    - name: Install rabbitmq server
+    - name: Install RabbitMQ Server
       ansible.builtin.yum:
         name: rabbitmq-server
         state: installed
 
-    - name: start rabbitmq server
+    - name: Start RabbitMQ Service
       ansible.builtin.systemd:
         name: rabbitmq-server
         state: restarted
         enabled: yes
-       
-    - name: add application user
+
+    - name: Add Application User
       community.rabbitmq.rabbitmq_user:
         user: roboshop
         password: roboshop123
