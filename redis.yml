@@ -32,9 +32,9 @@
 
     - name: Systemd setup
       ansible.builtin.systemd:
-       name: redis
-       latest: restarted
-       enabled: yes
+        name: redis
+        state: restarted
+        enabled: yes
 
 
 
